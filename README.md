@@ -1,6 +1,6 @@
 # Pilloe
 
-This project, titled Dream Interpreter, uses AI to provide potential interpretations for your dreams. It is built using the React JavaScript library and makes use of the OpenAI GPT-3 model to generate interpretations.
+This project uses AI to provide potential interpretations for your dreams. It is built using the React JavaScript library and makes use of the OpenAI GPT-3 model to generate interpretations.
 
 ## Project Structure
 The main component in the project is the DreamInput component. This component contains a form that collects the user's dream description, sends the data to the OpenAI API for interpretation, and displays the result. It also includes a loading state to provide feedback while the interpretation is being processed.
