@@ -1,6 +1,6 @@
 # Pilloe
 
-This project, titled Dream Interpreter, uses AI to provide potential interpretations for your dreams. It is built using the React JavaScript library and makes use of the OpenAI GPT-3 model to generate interpretations.
+This project uses AI to provide potential interpretations for your dreams. It is built using the React JavaScript library and makes use of the OpenAI GPT-3 model to generate interpretations.
 
 ![Image 1](images/pilloe1.gif)
 ![Image 2](images/image-1.png)
@@ -24,13 +24,16 @@ Now, you're ready to start the project with npm start.
 
 In the project directory, you can run:
 
-npm start
+### npm start
+
 Runs the app in the development mode. Open http://localhost:3000 to view it in your browser.
 
-npm test
+### npm test
+
 Launches the test runner in the interactive watch mode. For now, no tests have been written for the application.
 
-npm run build
+### npm run build
+
 Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
 ## Using the App
