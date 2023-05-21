@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/pilloe/static/css/main.adcd0666.css",
+    "main.js": "/pilloe/static/js/main.476af246.js",
+    "index.html": "/pilloe/index.html",
+    "main.adcd0666.css.map": "/pilloe/static/css/main.adcd0666.css.map",
+    "main.476af246.js.map": "/pilloe/static/js/main.476af246.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.adcd0666.css",
+    "static/js/main.476af246.js"
+  ]
+}
