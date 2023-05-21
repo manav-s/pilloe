@@ -91,7 +91,7 @@ const DreamInput = () => {
       </div>
       <InformationCircleIcon
         onClick={() => setInfoDialogOpen(true)}
-        className="absolute bottom-4 h-10 w-10 text-black hover:text-slate-400"
+        className="absolute bottom-4 h-10 w-10 text-slate-700 hover:text-slate-400 left-0 right-0 mx-auto"
       />
       <InfoDialog
         open={infoDialogOpen}

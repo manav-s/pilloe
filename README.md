@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Pilloe
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project, titled Dream Interpreter, uses AI to provide potential interpretations for your dreams. It is built using the React JavaScript library and makes use of the OpenAI GPT-3 model to generate interpretations.
+
+## Project Structure
+The main component in the project is the DreamInput component. This component contains a form that collects the user's dream description, sends the data to the OpenAI API for interpretation, and displays the result. It also includes a loading state to provide feedback while the interpretation is being processed.
+
+## Getting Started
+First, clone the repository to your local machine. Then, install the required dependencies with npm install.
+
+You'll need to provide your OpenAI API key. Create a .env file in the root of your project, and add the following line, replacing your_api_key with your actual key:
+
+REACT_APP_API_KEY=your_api_key
+
+Now, you're ready to start the project with npm start.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+npm start
+Runs the app in the development mode. Open http://localhost:3000 to view it in your browser.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm test
+Launches the test runner in the interactive watch mode. For now, no tests have been written for the application.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm run build
+Builds the app for production to the build folder. It correctly bundles React in production mode and optimizes the build for the best performance.
 
-### `npm test`
+## Using the App
+Enter a detailed description of your dream into the provided text box, then click on the "Interpret Dream" button. After a few moments, the AI-generated interpretation of your dream will be displayed.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
+If you'd like to contribute, feel free to fork the repository and create a pull request with your changes. If you find any bugs, please create an issue in the GitHub repository.
 
 ## Learn More
+To learn more about the technologies used in this project, you can refer to the following documentation:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Remember, this is an experimental project that uses AI to interpret dreams based on common dream symbolism. The interpretations provided by the AI should not be considered as professional advice. Always consult with a professional when necessary.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+https://create-react-app.dev/docs/getting-started/
 
-### Code Splitting
+https://react.dev/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+https://axios-http.com/docs/intro
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+https://platform.openai.com/docs/introduction
