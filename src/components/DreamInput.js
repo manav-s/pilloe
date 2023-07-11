@@ -1,27 +1,24 @@
 import React, { useState } from "react";
-import { InformationCircleIcon } from "@heroicons/react/outline";
-import InfoDialog from "./InfoDialog";
 import axios from "axios";
 
 const DreamInput = () => {
   const [dreamText, setDreamText] = useState("");
   const [responseText, setResponseText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [infoDialogOpen, setInfoDialogOpen] = useState(false); // the boolean to open or close the information dialog
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (dreamText.trim()) {
       setIsLoading(true);
       try {
         const response = await axios.post(
-          "https://api.openai.com/v1/engines/text-davinci-003/completions",
+          "https://api.openai.com/v1/chat/completions",
           {
-            prompt: `Please interpret this dream: ${dreamText}`,
-            max_tokens: 150,
-            n: 1,
-            stop: null,
-            temperature: 0.5,
+            model: "gpt-3.5-turbo",
+            messages: [
+              { role: "system", content: "You are a dream intepreting bot." },
+              { role: "user", content: dreamText },
+            ],
           },
           {
             headers: {
@@ -31,14 +28,15 @@ const DreamInput = () => {
           }
         );
 
-        const interpretedDream = response.data.choices[0].text;
-        setResponseText(interpretedDream); // Save user input
+        const interpretedDream = response.data.choices[0].message.content;
+        setResponseText(interpretedDream);
       } catch (error) {
         console.error("Error interpreting dream:", error);
         setResponseText("Error interpreting dream. Please try again.");
       } finally {
         setIsLoading(false);
       }
+      setDreamText("");
     }
   };
 
@@ -54,7 +52,7 @@ const DreamInput = () => {
         >
           <div className="mb-4">
             <label
-              className="block text-gray-700 text-lg font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2"
               htmlFor="dreamText"
             >
               Describe your dream:
@@ -67,9 +65,9 @@ const DreamInput = () => {
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             ></textarea>
           </div>
-          <div className="flex justify-between">
+          <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Interpret Dream
@@ -89,14 +87,6 @@ const DreamInput = () => {
           )}
         </form>
       </div>
-      <InformationCircleIcon
-        onClick={() => setInfoDialogOpen(true)}
-        className="absolute bottom-4 h-10 w-10 text-slate-700 hover:text-slate-400 left-0 right-0 mx-auto"
-      />
-      <InfoDialog
-        open={infoDialogOpen}
-        onClose={() => setInfoDialogOpen(false)}
-      />
     </div>
   );
 };

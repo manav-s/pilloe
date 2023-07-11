@@ -1,5 +1,4 @@
 {
-  "homepage": "https://manav-s.github.io/pilloe",
   "name": "dream",
   "version": "0.1.0",
   "private": true,
@@ -12,7 +11,7 @@
     "axios": "^1.3.4",
     "heroicons": "^2.0.16",
     "icons": "^1.0.0",
-    "openai": "^3.2.1",
+    "openai": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
@@ -25,8 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -47,7 +45,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0",
     "tailwindcss": "^3.2.7"
   }
 }
