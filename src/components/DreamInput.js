@@ -16,7 +16,7 @@ const DreamInput = () => {
           {
             model: "gpt-3.5-turbo",
             messages: [
-              { role: "system", content: "You are a dream intepreting bot." },
+              { role: "system", content: "You are a dream intepreting bot. Make the answer concise and effective. also give someone pratical advice on what they could do. keep it to 3-4 sentences and simple" },
               { role: "user", content: dreamText },
             ],
           },
